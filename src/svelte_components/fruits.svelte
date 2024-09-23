@@ -43,7 +43,7 @@
         <button on:click={() => selectFruit('Apple 🍎')}>Apple 🍎</button>
         <button on:click={() => selectFruit('Banana 🍌')}>Banana 🍌</button>
         <button on:click={() => selectFruit('Mango 🥭')}>Mango 🥭</button>
-        <button on:click={() => selectFruit('Watermelon 🍉')}>Watermelon Slice 🍉</button>
+        <button on:click={() => selectFruit('Watermelon 🍉')}>Watermelon 🍉</button>
         <button on:click={() => selectFruit('Strawberry 🍓')}>Strawberry 🍓</button>
         <button on:click={() => selectFruit('Grapes 🍇')}>Grapes 🍇</button>
     </div>
