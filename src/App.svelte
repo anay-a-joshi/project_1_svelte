@@ -204,6 +204,16 @@
 <main>
 
     <section class="theme-toggle">
+        <!-- Add YouTube Link next to the theme toggle button -->
+        <a href="https://www.youtube.com/" target="_blank" class="youtube-link">
+            🎥 Demo Video
+        </a>
+
+        <!-- GitHub Link beside the theme toggle button -->
+        <a href="https://github.com/anay-a-joshi/project_1_svelte" target="_blank" class="github-link">
+            🛠 GitHub Repository
+        </a>
+
         <button class="theme-toggle-button" on:click={toggleTheme}>
             {#if isDarkMode}
             🌝 Light Mode
@@ -317,4 +327,28 @@
     {/if}
 </main>
 
+<style>
+.youtube-link {
+    margin-right: 18px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #ff4500;
+    font-weight: bold;
+}
 
+.youtube-link:hover {
+    color: #00FF33; /* Color change on hover */
+}
+
+.github-link {
+    margin-right: 18px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #ff4500;
+    font-weight: bold;
+}
+
+.github-link:hover {
+    color: #00FF33; /* Color change on hover */
+}
+</style>
