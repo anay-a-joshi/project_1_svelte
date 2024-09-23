@@ -5,45 +5,45 @@
      * Level: Undergraduate Student
      */
 
-    export let wantsToLogMore;
-    export let newActivity = '';
+    export let wantsToRemove = false;
+    export let activityToRemove = '';
 
-    // Function to handle submission and show alert
-    const handleActivitySubmission = () => {
-        if (wantsToLogMore && newActivity.trim() !== '') {
-            alert(`Thanks for your patience! 🙏\n\nYour Add New-Activity Request has been sent to the Customer Service team. Your account would be updated soon with the new activity - '${newActivity}'.`);
-            // You can add any other logic here for the submission
+    // Function to handle activity removal and show alert
+    const handleRemoveActivity = () => {
+        if (wantsToRemove && activityToRemove.trim() !== '') {
+            alert(`Verification pending!\nThe Customer Service Team has been notified to remove the following activity from your account: "${activityToRemove}".\n\nThank you for your patience! 🙏`);
+            // Additional logic for removal can go here
         }
     };
 </script>
 
-<div class="log-more">
-    <h3>Do you want to log any other new activity?</h3>
+<div class="remove-activity">
+    <h3>Do you want to remove an activity?</h3>
 
     <div class="yes-no-buttons">
         <label>
-            <input type="radio" bind:group={wantsToLogMore} value={true}> Yes
+            <input type="radio" bind:group={wantsToRemove} value={true}> Yes
         </label>
         <label>
-            <input type="radio" bind:group={wantsToLogMore} value={false}> No
+            <input type="radio" bind:group={wantsToRemove} value={false}> No
         </label>
     </div>
 
-    {#if wantsToLogMore}
-        <div class="new-activity-entry">
-            <label for="new-activity">Please enter your new activity:</label>
-            <input type="text" id="new-activity" bind:value={newActivity} placeholder="Type your new activity here...">
+    {#if wantsToRemove}
+        <div class="remove-activity-entry">
+            <label for="remove-activity">Please enter the activity you want to remove:</label>
+            <input type="text" id="remove-activity" bind:value={activityToRemove} placeholder="Type the activity name...">
         </div>
 
-        <!-- Submit button that triggers the alert when the user enters the activity -->
-        <button on:click={handleActivitySubmission} class="submit-button">
-            Submit New-Activity Request
+        <!-- Submit button for removing activity -->
+        <button on:click={handleRemoveActivity} class="submit-button">
+            Submit Activity Removal Request
         </button>
     {/if}
 </div>
 
 <style>
-    .log-more {
+    .remove-activity {
         margin-bottom: 1.5rem;
     }
 
@@ -70,17 +70,17 @@
         background-color: var(--primary-color-dark);
     }
 
-    /* New activity text entry */
-    .new-activity-entry {
+    /* Text input for removing activity */
+    .remove-activity-entry {
         margin-top: 1rem;
     }
 
-    .new-activity-entry label {
+    .remove-activity-entry label {
         display: block;
         margin-bottom: 0.5rem;
     }
 
-    .new-activity-entry input[type="text"] {
+    .remove-activity-entry input[type="text"] {
         width: 100%;
         padding: 0.5rem;
         border: 1px solid #ccc;

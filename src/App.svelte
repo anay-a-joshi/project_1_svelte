@@ -13,10 +13,12 @@
     import WaterIntake from './svelte_components/water_consumption.svelte';
     import ProductivityChart from './svelte_components/visual_feedback.svelte';
     import Progress from './svelte_components/activity_progress.svelte';
-
     import LogMoreActivity from './svelte_components/new_activity.svelte'; // Import the new component
+    import RemoveActivity from './svelte_components/remove_activity.svelte';
 
     // Your existing variables and functions
+    let wantsToRemove = false;
+    let activityToRemove = '';
 
     let wantsToLogMore = false;  // Track if user wants to log more
     let newActivity = '';        // Variable for storing the new activity input
@@ -121,7 +123,7 @@
         yogaProgress = (yogaDuration / yogaGoal) * 100;
         waterIntakeProgress = (waterIntake / waterGoal) * 100;
 
-        alert('✅ Success! Journal saved for ' + formattedDate + '!');
+        alert('✅ Success! \nJournal saved for ' + formattedDate + '!');
     };
 
     // Retrieve journal data from localStorage and populate the fields for the selected date
@@ -175,9 +177,9 @@
 
         if (savedJournalData) {
             retrieveJournalData();  // Fetch and populate journal data if it exists
-            alert(`✅ Great! Your data entry for ${formattedDate} has been loaded successfully.`);
+            alert(`✅ Great! \nYour data entry for ${formattedDate} has been loaded successfully.`);
         } else {
-            alert(`🥺 Oops! You haven't logged any activity for ${formattedDate} yet. Please fill in your details to get started!`);  // Show alert if no data found
+            alert(`🥺 Oops! \nYou haven't logged any activity for ${formattedDate} yet. Please fill in your details to get started!`);  // Show alert if no data found
         }
     };
 
@@ -262,6 +264,11 @@
         <section class="card log-more-section">
             <h2>Add New Activity Request</h2>
             <LogMoreActivity bind:wantsToLogMore bind:newActivity />
+        </section>
+
+        <section class="card remove-activity-section">
+            <h2>Remove Activity Request</h2>
+            <RemoveActivity bind:wantsToRemove bind:activityToRemove />
         </section>
 
         <!-- Submit button to save journal data -->
