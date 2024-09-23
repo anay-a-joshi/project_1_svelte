@@ -11,7 +11,7 @@
     // Function to handle submission and show alert
     const handleActivitySubmission = () => {
         if (wantsToLogMore && newActivity.trim() !== '') {
-            alert(`Thanks for your patience! 🙏\n\nYour Add New-Activity Request has been sent to the Customer Service team. Your account would be updated soon with the new activity - '${newActivity}'.`);
+            alert(`Thanks for your patience! 🙏\n\nYour Add New-Activity Request has been sent to the Customer Service team. Your account would be updated soon with the new activity - "${newActivity}".`);
             // You can add any other logic here for the submission
         }
     };
