@@ -73,7 +73,7 @@
         retrieveJournalData();  
 
         setTimeout(() => {
-            skill = prompt(`What skill would you like to work on today, ${user.Name}?`) || 'Skill';  // Fallback to 'Skill' if input is empty
+            skill = prompt(`Hi ${user.Name}, what specific skill would you like to focus on improving today?`) || 'Skill';  // Fallback to 'Skill' if input is empty
     }, 100);
     };
 
