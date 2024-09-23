@@ -11,7 +11,7 @@
     // Function to handle activity removal and show alert
     const handleRemoveActivity = () => {
         if (wantsToRemove && activityToRemove.trim() !== '') {
-            alert(`Verification pending!\nThe Customer Service Team has been notified to remove the following activity from your account: "${activityToRemove}".\n\nThank you for your patience! 🙏`);
+            alert(`Verification pending!\nThe Customer Service Team has been notified to remove the following activity from your account: "${activityToRemove}".\n\nYour account would be updated soon. Thank you for your patience! 🙏`);
             // Additional logic for removal can go here
         }
     };
