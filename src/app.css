@@ -1,0 +1,408 @@
+/* Import Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+/* CSS Variables for Colors and Fonts */
+:root {
+  --primary-color: #f44336; /* Vibrant Red */
+  --primary-color-dark: #d32f2f; /* Darker Red */
+  --accent-color: #4caf50; /* Green Accent for success or emphasis */
+  --text-color: #333333; /* Dark Gray for readability */
+  --background-color: #f0f4c3; /* Light yellow-green for background */
+  --card-background-color: #ffffff; /* White for cards */
+  --card-border-color: #cccccc; /* Light gray for card borders */
+  --error-color: #d32f2f; /* Soft Red for errors */
+  --info-color: #3498db; /* Light Blue for informational messages */
+  --success-color: #4caf50; /* Green for success messages */
+  --warning-color: #f39c12; /* Orange for warnings */
+  --font-family: "Lato", sans-serif; /* Clean, modern font */
+}
+
+/* Default (Light Mode) */
+.theme-toggle {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+}
+
+.theme-toggle-button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.theme-toggle-button:hover {
+  background-color: var(--primary-color-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Light Mode Styles */
+:root {
+  --primary-color: #f44336; /* Red */
+  --primary-color-dark: blue; /* Darker red for hover */
+  --background-color: #f0f4c3; /* Light yellow-green */
+  --text-color: navy; /* Dark gray for text */
+  --card-background-color: #ffffff; /* White cards */
+  --card-border-color: #cccccc; /* Light gray border for cards */
+  --login-container-bg: linear-gradient(
+    135deg,
+    #4ca1af, /* Gradient color 1 */
+    #c4e0e5  /* Gradient color 2 */
+  ); /* Light mode gradient */
+}
+
+/* Dark Mode Styles */
+[data-theme="dark"] {
+  --primary-color: red; /* Soft Purple */
+  --primary-color-dark: blue; /* Darker purple for hover */
+  --background-color: black; /* Dark gray background */
+  --text-color: navy; /* Light text for readability */
+  --card-background-color: ghostwhite; /* Dark gray cards */
+  --card-border-color: #333333; /* Dark border for cards */
+  --login-container-bg: linear-gradient(
+    135deg,
+    #232526, /* Gradient color 1 for dark mode */
+    #414345  /* Gradient color 2 for dark mode */
+  ); /* Dark mode gradient */
+}
+
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.card {
+  background-color: var(--card-background-color);
+}
+
+.submit {
+  background-color: var(--primary-color);
+}
+
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+}
+
+.theme-toggle label {
+  margin-right: 10px;
+}
+
+/* Reset and Box Sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+  font-family: var(--font-family);
+    background: url('/src/assets/15309283626_fd44aa8fb2_k.jpg') no-repeat center center fixed;
+
+  color: var(--text-color);
+  background-color: var(--background-color);
+  line-height: 1.6;
+}
+
+/* Main Container */
+main {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem auto;
+}
+
+/* Card Layout for Sections */
+.card-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; /* Regular spacing between cards */
+}
+
+.card {
+  background-color: var(--card-background-color);
+  border: 1px solid var(--card-border-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+  margin-bottom: 5rem; /* Default margin */
+  margin-top: 7rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, margin 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.5); /* Scale up to 1.5 and move slightly upward */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Add deeper shadow */
+  margin-top: 5rem; /* Add more space above when hovered */
+  margin-bottom: 5rem; /* Add more space below when hovered */
+}
+
+
+/* Optional: Ensure no overflow on the container */
+.container {
+  overflow: hidden;
+}
+
+.card h2 {
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+}
+
+/* Form Styles */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+input[type="number"],
+input[type="date"] {
+  padding: 0.75rem;
+  border: 1px solid var(--card-border-color);
+  border-radius: 8px;
+}
+
+label {
+  font-size: 1rem;
+  color: var(--text-color);
+}
+
+/* Submit Button */
+.submit {
+  background: linear-gradient(45deg, var(--primary-color), var(--info-color)); /* Blue and purple gradient */
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s, transform 0.2s;
+  display: block;
+  margin: 2.5rem auto 2.5rem auto;
+  width: 50%;
+  text-align: center;
+}
+
+.submit:hover {
+  background: linear-gradient(45deg, var(--info-color), var(--primary-color-dark)); /* Inverted gradient */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Section Specific Styles */
+.date-picker {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Feelings Section */
+.feelings {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.feelings label {
+  padding: 0.5rem 1rem;
+  background-color: var(--success-color);  /* Green */
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.feelings input[type="checkbox"]:checked + label {
+  background-color: var(--warning-color);  /* Orange for checked */
+}
+
+/* Reflection Section */
+.reflection textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+/* Progress Bars */
+progress {
+  display: block;
+  width: 100%;
+  height: 20px;
+  margin-bottom: 1rem;
+}
+
+/* User Info Section */
+.user-info {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.user-info .date,
+.user-info .active-days {
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+}
+
+/* Login Container */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background-color: var(--card-background-color);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-container input[type="text"],
+.login-container input[type="password"] {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.login-container button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.login-container button:hover { 
+  background-color: var(--primary-color-dark);
+}
+
+/* Yoga Duration and Slider Styles */
+.yoga-slider input[type="range"] {
+  width: 100%;
+}
+
+.yoga-slider label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+/* Water Intake Buttons */
+.water-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.water-buttons button {
+  flex: 1;
+  margin: 0 5px;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: var(--success-color); /* Green */
+  color: white;
+  transition: background 0.3s ease;
+}
+
+.water-buttons button:hover {
+  background-color: var(--info-color); /* Light blue on hover */
+}
+
+/* Yes/No Buttons for Yoga */
+.yes-no-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
+}
+
+.yes-no-buttons label {
+  flex: 1;
+  text-align: center;
+  margin: 0 5px;
+  cursor: pointer;
+  background-color: var(--warning-color);  /* Orange */
+  padding: 0.5rem;
+  border-radius: 8px;
+  color: white;
+  transition: background 0.3s ease;
+}
+
+.yes-no-buttons label:hover {
+  background-color: var(--primary-color);  /* Purple on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+  main {
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  button {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .submit {
+    width: 100%;
+  }
+
+  .feelings {
+    justify-content: center;
+  }
+
+  .login-container {
+    width: 100%;
+  }
+}
+
+
+.date-picker {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: space-between; /* Ensures the button is to the right */
+}
+
+.fetch-button {
+  background-color: #0015f6; /* Matches the deep blue theme */
+  color: #fff; /* White text */
+  border: none;
+  border-radius: 5px;
+  padding: 8px 15px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+  margin-left: auto; /* Pushes the button to the right */
+}
+
+.fetch-button:hover {
+  background-color: #357ABD; /* Darker blue for hover */
+}
+
+.fetch-button:active {
+  background-color: #2C5A9B; /* Even darker blue for active state */
+}
+
+.fetch-button:focus {
+  outline: none;
+  box-shadow: 0 0 5px 2px rgba(74, 144, 226, 0.5); /* Light blue focus glow */
+}
