@@ -110,7 +110,10 @@
             yogaDuration,
             waterIntake,
             wantsToLogMore,      // Include the decision to log more
-            newActivity
+            newActivity,
+            wantsToRemove,       // Include the decision to remove activity
+            activityToRemove,    // Store the activity to be removed
+            fruitIntake 
         };
 
         // Store the data in localStorage with the user's name and the selected date as key
@@ -145,6 +148,11 @@
             didYoga = journalData.didYoga || false;
             yogaDuration = journalData.yogaDuration || 0;
             waterIntake = journalData.waterIntake || 0;
+            wantsToLogMore = journalData.wantsToLogMore || false; // Restore wantsToLogMore
+            newActivity = journalData.newActivity || '';          // Restore newActivity
+            wantsToRemove = journalData.wantsToRemove || false;   // Restore wantsToRemove
+            activityToRemove = journalData.activityToRemove || ''; // Restore activityToRemove
+            fruitIntake = journalData.fruitIntake || 0;
 
             // Update productivityData for the pie chart
             productivityData = [skillPractice, yogaDuration/60, waterIntake];
@@ -162,6 +170,11 @@
             didYoga = false;
             yogaDuration = 0;
             waterIntake = 0;
+            wantsToLogMore = false;
+            newActivity = '';
+            wantsToRemove = false;
+            activityToRemove = '';
+            fruitIntake = 0;
 
             // Reset productivityData
             productivityData = [0, 0, 0];
