@@ -97,7 +97,7 @@
 
         // Store the data in localStorage with the user's name and the selected date as key
 
-        const formattedDate = selectedDate.toDateString();
+        const formattedDate = selectedDate.toISOString().split("T")[0];
         localStorage.setItem(user.username + '_journal_' + formattedDate, JSON.stringify(journalData));
 
         // Update productivityData for the pie chart
@@ -108,12 +108,12 @@
         yogaProgress = (yogaDuration / yogaGoal) * 100;
         waterIntakeProgress = (waterIntake / waterGoal) * 100;
 
-        alert('Journal saved successfully for ' + formattedDate + '!');
+        alert('Success! Journal saved for ' + formattedDate + '!');
     };
 
     // Retrieve journal data from localStorage and populate the fields for the selected date
     const retrieveJournalData = () => {
-        const formattedDate = selectedDate.toDateString();
+        const formattedDate = selectedDate.toISOString().split("T")[0];
         const savedJournalData = localStorage.getItem(user.username + '_journal_' + formattedDate);
 
         if (savedJournalData) {
@@ -156,7 +156,6 @@
         }
     };
 
-    // Function to handle fetching journal data or showing an alert if no data is found
     const handleJournalFetch = () => {
     const formattedDate = selectedDate.toISOString().split('T')[0];  // Format as YYYY-MM-DD
         const savedJournalData = localStorage.getItem(user.username + '_journal_' + formattedDate);
