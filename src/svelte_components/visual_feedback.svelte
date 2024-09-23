@@ -14,13 +14,13 @@
         }
 
         chartInstance = new Chart(chartCanvas, {
-            type: 'pie',
+            type: 'doughnut',
             data: {
                 labels: ['Learning/Practice Time', 'Stretching/Yoga Duration', 'Hydration Levels'],
                 datasets: [{
                     label: 'Productivity Breakdown',
                     data: productivityData,
-                    backgroundColor: ['#03dac6', '#6110ee', '#b00020'],
+                    backgroundColor: ['yellow', 'blue', 'green'],
                     hoverOffset: 4
                 }]
             },
