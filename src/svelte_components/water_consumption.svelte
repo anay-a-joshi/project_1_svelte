@@ -1,4 +1,11 @@
 <script>
+
+    /*
+     * Name: Anay Abhijit Joshi
+     * CS 5167: User Interface 1
+     * Level: Undergraduate Student
+     */
+    
     import { tweened } from 'svelte/motion';
     import { cubicOut } from 'svelte/easing';
 

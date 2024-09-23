@@ -1,4 +1,11 @@
 <script>
+
+    /*
+     * Name: Anay Abhijit Joshi
+     * CS 5167: User Interface 1
+     * Level: Undergraduate Student
+     */
+
     export let habitProgress = 0; // Progress for each habit
     export let habitName = ''; // Name of the habit to display
 </script>

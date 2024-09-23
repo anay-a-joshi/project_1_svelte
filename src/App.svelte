@@ -1,4 +1,8 @@
 <script>
+    // Name: Anay Abhijit Joshi
+    // CS 5167: User Interface 1
+    // Level: Undergraduate Student
+
     import Login from './svelte_components/user_login.svelte';
     import Feelings from './svelte_components/daily_feelings.svelte';
     import ImageUpload from './svelte_components/daily_image.svelte';
@@ -162,8 +166,9 @@
 
         if (savedJournalData) {
             retrieveJournalData();  // Fetch and populate journal data if it exists
+            alert(`Great! Your data entry for ${formattedDate} has been loaded successfully.`);
         } else {
-            alert(`Success! Journal data found for ${formattedDate}.`);  // Show alert if no data found
+            alert(`Oops! You haven't logged any activity for ${formattedDate} yet. Please fill in your details to get started!`);  // Show alert if no data found
         }
     };
 

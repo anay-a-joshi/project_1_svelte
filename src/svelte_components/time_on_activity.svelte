@@ -1,4 +1,11 @@
 <script>
+
+    /*
+     * Name: Anay Abhijit Joshi
+     * CS 5167: User Interface 1
+     * Level: Undergraduate Student
+     */
+
     export let skillPractice;
     export let skill;  // Receive the skill from parent component
 </script>

@@ -1,4 +1,11 @@
 <script>
+
+    /*
+     * Name: Anay Abhijit Joshi
+     * CS 5167: User Interface 1
+     * Level: Undergraduate Student
+     */
+
     export let user; 
     let currentDate = new Date(); // Current date for user information
     let startDate = new Date('2024-09-11'); // User's start date as a Date object
@@ -15,15 +22,15 @@
 
 <style>
     .user-info {
-    text-align: center;
-    background-color: red; /* Light background to make the text stand out */
-    padding: 20px;
-    border-radius: 10px; /* Soft rounded corners for a modern look */
-    max-width: 400px;
-    margin: 0 auto; /* Center the section */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    font-family: 'Arial', sans-serif; /* Clean and readable font */
-}
+        text-align: center;
+        background-color: red; /* Light background to make the text stand out */
+        padding: 20px;
+        border-radius: 10px; /* Soft rounded corners for a modern look */
+        max-width: 400px;
+        margin: 0 auto; /* Center the section */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+        font-family: 'Arial', sans-serif; /* Clean and readable font */
+    }
 
 
     .user-info h1 {
@@ -44,6 +51,11 @@
         color: #333;
     }
 
+    .user-info .date {
+        font-size: 1.2rem; /* Slightly increased font size for readability */
+        font-weight: 500;
+        color: #333;
+    }
 
     .user-info .active-days {
         background-color: #e0f7fa; /* Highlight active days with a soft background color */

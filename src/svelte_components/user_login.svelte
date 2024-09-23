@@ -1,4 +1,11 @@
 <script lang="ts">
+
+    /*
+     * Name: Anay Abhijit Joshi
+     * CS 5167: User Interface 1
+     * Level: Undergraduate Student
+     */
+
     import { createEventDispatcher } from 'svelte';
     
     let username = '';

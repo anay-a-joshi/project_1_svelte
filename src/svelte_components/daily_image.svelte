@@ -1,5 +1,12 @@
 <!-- ImageUpload.svelte -->
 <script>
+
+    /*
+     * Name: Anay Abhijit Joshi
+     * CS 5167: User Interface 1
+     * Level: Undergraduate Student
+     */
+
     export let image;
     // export let dailyReflection;
 </script>
