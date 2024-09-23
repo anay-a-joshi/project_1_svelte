@@ -21,7 +21,7 @@
             alert(`🙏 Welcome back, ${username}!`);
             dispatch('login', { username });
         } else {
-            alert('❌ Error! Invalid login details, please try again or create an account!');
+            alert('❌ Error! Please try again.\n Invalid login credentials, or Create an account (if new user)!');
         }
     };
 
@@ -34,7 +34,7 @@
         } else {
             const newUser = { username, password};
             localStorage.setItem(username, JSON.stringify(newUser));
-            alert('✅ Success! Your account has been created! Please login again with the valid credentials.');
+            alert('✅ Success! Your account has been created! \nPlease login again with the valid credentials.');
             isLogin = true;
         }
     };

@@ -14,6 +14,13 @@
     import ProductivityChart from './svelte_components/visual_feedback.svelte';
     import Progress from './svelte_components/activity_progress.svelte';
 
+    import LogMoreActivity from './svelte_components/new_activity.svelte'; // Import the new component
+
+    // Your existing variables and functions
+
+    let wantsToLogMore = false;  // Track if user wants to log more
+    let newActivity = '';        // Variable for storing the new activity input
+
     // Theme toggle state
     let isDarkMode = false;
 
@@ -96,7 +103,9 @@
             skillPractice,
             didYoga,
             yogaDuration,
-            waterIntake
+            waterIntake,
+            wantsToLogMore,      // Include the decision to log more
+            newActivity
         };
 
         // Store the data in localStorage with the user's name and the selected date as key
@@ -250,6 +259,11 @@
             <WaterIntake bind:waterIntake />
         </section>
 
+        <section class="card log-more-section">
+            <h2>Add New Activity Request</h2>
+            <LogMoreActivity bind:wantsToLogMore bind:newActivity />
+        </section>
+
         <!-- Submit button to save journal data -->
         <button on:click={saveJournalData} class='submit'>Submit</button>
 
@@ -274,3 +288,4 @@
         <Login on:login={onLoginSuccess} />
     {/if}
 </main>
+
