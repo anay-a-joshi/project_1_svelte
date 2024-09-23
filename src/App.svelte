@@ -15,6 +15,7 @@
     import Progress from './svelte_components/activity_progress.svelte';
     import LogMoreActivity from './svelte_components/new_activity.svelte'; // Import the new component
     import RemoveActivity from './svelte_components/remove_activity.svelte';
+    import FruitTracker from './svelte_components/fruits.svelte';  // Import your new fruit tracker component
 
     // Your existing variables and functions
     let wantsToRemove = false;
@@ -25,6 +26,8 @@
 
     // Theme toggle state
     let isDarkMode = false;
+
+    let fruitIntake = 0; // Variable to track the fruit intake in App.svelte
 
     // Helper to toggle between themes
     const toggleTheme = () => {
@@ -241,6 +244,11 @@
             </form>
         </section>
 
+        <section class="card water-intake-section">
+            <h2>{user.username}'s Body Hydration</h2>
+            <WaterIntake bind:waterIntake />
+        </section>
+
         <section class="card reflection-section">
             <h2>Today's Insights of {user.username}</h2>
             <Reflection bind:dailyReflection />
@@ -256,9 +264,9 @@
             <YogaDuration bind:didYoga bind:yogaDuration />
         </section>
 
-        <section class="card water-intake-section">
-            <h2>{user.username}'s Body Hydration</h2>
-            <WaterIntake bind:waterIntake />
+        <section class="card fruit-tracker-section">
+            <h2>Fruits Intake</h2>
+            <FruitTracker bind:fruitIntake />
         </section>
 
         <section class="card log-more-section">
@@ -276,7 +284,7 @@
 
         <!-- Progress tracking for habits -->
         <section class="card progress-tracking-section">
-            <h2>{user.username}'s Overall Average (in %)</h2>
+            <h2>{user.username}'s Overall Performance (in %)</h2>
             <Progress habitProgress={skillPracticeProgress} habitName="Average Time on {skill}" />
             <Progress habitProgress={yogaProgress} habitName="Average Stretching Duration" />
             <Progress habitProgress={waterIntakeProgress} habitName="Average Water Intake" />
@@ -295,4 +303,5 @@
         <Login on:login={onLoginSuccess} />
     {/if}
 </main>
+
 

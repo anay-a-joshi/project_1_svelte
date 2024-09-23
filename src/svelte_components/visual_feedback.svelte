@@ -1,10 +1,9 @@
 <script>
-
     /*
      * Name: Anay Abhijit Joshi
      * CS 5167: User Interface 1
      * Level: Undergraduate Student
-     */
+    */
 
     import { onMount, afterUpdate } from "svelte";
     import Chart from "chart.js/auto";

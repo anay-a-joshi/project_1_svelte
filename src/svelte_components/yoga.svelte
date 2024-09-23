@@ -62,11 +62,14 @@
     /* For the yoga slider */
     .yoga-slider {
         margin-top: 1rem;
+        color: magenta;
+        font-weight: bold;
     }
 
     .yoga-slider label {
         display: block;
         margin-bottom: 0.5rem;
+        color: blue;
     }
 
     .yoga-slider input[type="range"] {
