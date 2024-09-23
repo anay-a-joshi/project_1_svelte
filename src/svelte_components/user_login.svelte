@@ -18,10 +18,10 @@
         const storedUser = JSON.parse(localStorage.getItem(username));
         
         if (storedUser && storedUser.password === password) {
-            alert(`Welcome back, ${username}!`);
+            alert(`🙏 Welcome back, ${username}!`);
             dispatch('login', { username });
         } else {
-            alert('Error! Invalid login details, please try again or create an account!');
+            alert('❌ Error! Invalid login details, please try again or create an account!');
         }
     };
 
@@ -30,11 +30,11 @@
         const storedUser = JSON.parse(localStorage.getItem(username));
 
         if (storedUser) {
-            alert('User already exists. Please login.');
+            alert('😉 User already exists. Please login.');
         } else {
             const newUser = { username, password};
             localStorage.setItem(username, JSON.stringify(newUser));
-            alert('Success! Your account has been created! Please login again with the valid credentials.');
+            alert('✅ Success! Your account has been created! Please login again with the valid credentials.');
             isLogin = true;
         }
     };

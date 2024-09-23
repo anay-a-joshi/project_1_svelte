@@ -77,7 +77,7 @@
         retrieveJournalData();  
 
         setTimeout(() => {
-            skill = prompt(`Hi ${user.username}, what specific skill would you like to focus on improving today?`) || 'Skill';  // Fallback to 'Skill' if input is empty
+            skill = prompt(`Hi ${user.username}, what specific skill would you like to focus on improving today? 🤔`) || 'Skill';  // Fallback to 'Skill' if input is empty
     }, 100);
     };
 
@@ -112,7 +112,7 @@
         yogaProgress = (yogaDuration / yogaGoal) * 100;
         waterIntakeProgress = (waterIntake / waterGoal) * 100;
 
-        alert('Success! Journal saved for ' + formattedDate + '!');
+        alert('✅ Success! Journal saved for ' + formattedDate + '!');
     };
 
     // Retrieve journal data from localStorage and populate the fields for the selected date
@@ -166,9 +166,9 @@
 
         if (savedJournalData) {
             retrieveJournalData();  // Fetch and populate journal data if it exists
-            alert(`Great! Your data entry for ${formattedDate} has been loaded successfully.`);
+            alert(`✅ Great! Your data entry for ${formattedDate} has been loaded successfully.`);
         } else {
-            alert(`Oops! You haven't logged any activity for ${formattedDate} yet. Please fill in your details to get started!`);  // Show alert if no data found
+            alert(`🥺 Oops! You haven't logged any activity for ${formattedDate} yet. Please fill in your details to get started!`);  // Show alert if no data found
         }
     };
 
