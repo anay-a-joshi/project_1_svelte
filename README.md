@@ -21,7 +21,7 @@ This repository contains the code for the ```Project 1``` of  ```CS 5167``` ```U
 
 
 ## Design & Documentation  
-Explore the project's ``` design and documentation ``` here - [Design and Documentation](https://github.com/anay-a-joshi/project_1_svelte/blob/master/Design%20%26%20Documentation/Project1_FitnessSpectrum_AnayJoshi.pdf)  
+Explore the project's ``` design and documentation ``` within this repository or click here - [Design and Documentation](https://github.com/anay-a-joshi/project_1_svelte/blob/master/Design%20%26%20Documentation/Project1_FitnessSpectrum_AnayJoshi.pdf)  
 
 
   
