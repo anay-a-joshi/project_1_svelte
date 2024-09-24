@@ -17,7 +17,11 @@ This repository contains the code for the ```Project 1``` of  ```CS 5167``` ```U
 ## Demonstration Videos  
 [Watch Video 1](https://youtu.be/OcVVFa0BwtM)   -   ``` https://youtu.be/OcVVFa0BwtM ```  
   
-[Watch Video 2 (Continued)](https://youtu.be/wwGkD5-ycD8)     -   ``` https://youtu.be/wwGkD5-ycD8 ```    
+[Watch Video 2 (Continued)](https://youtu.be/wwGkD5-ycD8)     -   ``` https://youtu.be/wwGkD5-ycD8 ```   
+
+
+## Design & Documentation  
+Explore the project's ``` design and documentation ``` here - [Design and Documentation](https://github.com/anay-a-joshi/project_1_svelte/blob/master/Design%20%26%20Documentation/Project1_FitnessSpectrum_AnayJoshi.pdf)  
 
 
   
