@@ -205,7 +205,7 @@
 
     <section class="theme-toggle">
         <!-- Add YouTube Link next to the theme toggle button -->
-        <a href="https://www.youtube.com/" target="_blank" class="youtube-link">
+        <a href="https://youtu.be/OcVVFa0BwtM" target="_blank" class="youtube-link">
             🎥 Demo Video
         </a>
 
