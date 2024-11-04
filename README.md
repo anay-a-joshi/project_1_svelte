@@ -1,3 +1,5 @@
+![Profile Views](https://komarev.com/ghpvc/?username=anay-a-joshi&color=green)  
+
 # CS 5167 (User Interface 1) 
 ### Project 1: Fitness Spectrum
  
